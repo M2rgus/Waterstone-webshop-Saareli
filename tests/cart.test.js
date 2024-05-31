@@ -49,12 +49,14 @@ describe('Add products to shopping cart', () => {
     test('Test shopping cart has two correct items', async () => {
         Cartpage = await Homepage.goToShoppingCart();
         await Cartpage.verifyCartSumIsCorrect();
+        //Verify that cart has correct items added.
     })
 
     test('Test remove first product from the cart', async () => {
         await Cartpage.removeFirstItemFromCart();
         await Cartpage.verifyCartHasItems(1);
         await Cartpage.verifyCartSumIsCorrect();
+        //Verify that cart has correct items added.
     })
     
 })
